@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .7rem calc((100% - 1100px) / 2);
+    background-color: var(--purple-dark);
+}
+
+header h1 img {
+    height: 2.5rem;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header a {
+    color: var(--gray-1);
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+header nav a {
+    transition: color .3s ease;
+    position: relative;
+}
+
+header nav a.current-page {
+    color: var(--yellow-1);
+}
+
+header nav a:hover {
+    color: var(--yellow-1);
+}
+
+header nav a::before {
+    background-color: var(--gray-1);
+}
+
+header nav a.current-page::before {
+    background-color: var(--yellow-1);
+}
+
+header nav a::before { /* "Linha" que fica embaixo dos botões do Menu. Feitos usando uma pequena "Gambiarra" com os "::before"" do CSS. */
+    content: "";
+    position: absolute; /* Posiciona ele embaixo e no meio dos botões. */
+    top: 100%;
+    left: 50%;
+    width: 0%;
+    height: .2rem;
+    border-radius: .15rem;
+    transition: width .3s ease, left .3s ease, background-color .3s ease;
+}
+
+header nav a:hover::before { /* Quando ocorrer um ":hover", o "::before" aumentará de tamanho para 100% (total do botão) e sairá da posição "left: 50%" (deixa ele no meio do botão) e irá para 0% (começo), dando um efeito de que ele surgiu do meio do botão. */
+    left: 0%; /* Muda a posição dele para o começo ao mesmo tempo que expande, dando uma impressão que ele surgiu do "meio" do botão. */
+    width: 100%;
+    background-color: var(--yellow-1);
+}
+
+header > a {
+    display: inline-block;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .2rem var(--shadow);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+header > a:hover {
+    background-color: var(--yellow-2);
+    box-shadow: 0 0 .5rem var(--shadow);
+}

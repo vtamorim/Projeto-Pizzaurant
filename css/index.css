@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body {
+    background-color: var(--background);
+}
+
+.hero, main > section, footer {
+    padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
+}
+
+main section, footer {
+    margin-top: 4rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding-block: 4rem;
+    background-image: url("../images/background.png");
+}
+
+.hero figure img {
+    width: 30rem;
+}
+
+.hero :where(h2, p, a) {
+    color: var(--gray-1);
+}
+
+.hero h2 {
+    font-size: 4rem;
+}
+
+.hero h2 span {
+    color: var(--yellow-1);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-block: 1rem;
+}
+
+.hero a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .2rem var(--shadow);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+.hero a:hover {
+    background-color: var(--yellow-2);
+    box-shadow: 0 0 .5rem var(--shadow);
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); /* Need to be improved */
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.services div {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--gray-2);
+    box-shadow: 0 0 .2rem var(--shadow);
+}
+
+.services h3 {
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.services h3 span:first-child {
+    color: var(--yellow-1);
+    font-size: 4rem;
+}
+
+.services p {
+    color: var(--gray-4);
+}

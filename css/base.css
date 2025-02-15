@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+@font-face {
+    font-family: "Dancing Script";
+    src: url("../fonts/dancing_script.ttf");
+}
+
+:root {
+    --yellow-1: #FEA115;
+    --yellow-2: #ff8800;
+    --purple-dark: #070523;
+    --purple-light: #3D3979;
+    --background: #FFFEF6;
+    --gray-1: #F0F0F0;
+    --gray-2: #E5E5E5;
+    --gray-3: #8D8787;
+    --gray-4: #202020;
+    --black: #050505;
+    --shadow: rgba(0, 0, 0, .5);
+    --font-base: Arial, Helvetica, sans-serif;
+    --font-title: "Dancing Script", fantasy;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: var(--font-base);
+    margin: 0;
+    padding: 0;
+}
