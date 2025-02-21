@@ -5,15 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cardápio</title>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/cardapio.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <header>
-            <h1><img src="logo.svg" alt="Logotipo da Pizzaurant"></h1>
+            <h1><img src="../images/logo.svg" alt="Logotipo da Pizzaurant"></h1>
             
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="cardapio.html" class="current-page">Cardápio</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
@@ -22,13 +28,23 @@
             
             <a href="#">Reserve uma Mesa</a>
         </header>
+
+        <section class="hero">
+            <div>
+                <h2>Cardápio</h2>
+                <p>Pizzas Tradicionais, Doces e Especiais. Tudo você encontra por aqui!</p>
+            </div>
+        </section>
+
         <main>
+           
             <article>
-                <h2 class="italic_title"></h2>
+                <h2 class="italic_title">Itens do Cardápio</h2>
+
                 <ul>
                     <li>
                         <div>
-                            <span></span>
+                            <span><img src="../images/pizza.svg" alt="Pizza Icon"></span>
                             <div>
                                 <span>Pizzas</span>
                                 <p>Tradicionais</p>
@@ -37,7 +53,7 @@
                     </li>
                     <li>
                         <div>
-                            <span></span>
+                            <span><img src="../images/icecream.svg" alt="Sorvete Icon"></span>
                             <div>
                                 <span>Pizzas</span>
                                 <p>Doces</p>
@@ -46,7 +62,7 @@
                     </li>
                     <li>
                         <div>
-                            <span></span>
+                            <span><img src="../images/star.svg" alt="Estrela Icon"></span>
                             <div>
                                 <span>Pizzas</span>
                                 <p>Especiais</p>
@@ -55,7 +71,7 @@
                     </li>
                     <li>
                         <div>
-                            <span></span>
+                            <span><img src="../images/more.svg" alt="+ icon"></span>
                             <div>
                                 <span>Pizzas</span>
                                 <p>Adicionais</p>
@@ -63,11 +79,11 @@
                         </div>
                     </li>
                 </ul>
+                
                 <hr>
-                <div>
-                        <figure>
-                            <img src="" alt=""> 
-                        </figure>
+
+                <div id="lista_cardapio">
+                    <div>
                         <div>
                             <div>
                                 <h3>Mussarela</h3>
@@ -86,6 +102,8 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
+                        </div>
+                        <div>
                             <div>
                                 <h3>Calabresa</h3>
                                 <p>R$95.00</p>
@@ -103,6 +121,8 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
+                        </div>
+                        <div>
                             <div>
                                 <h3>Marguerita</h3>
                                 <p>R$100.00</p>
@@ -120,6 +140,10 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
                             <div>
                                 <h3>Portuguesa</h3>
                                 <p>R$87.00</p>
@@ -137,6 +161,8 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
+                        </div>
+                        <div>
                             <div>
                                 <h3>Napolitana</h3>
                                 <p>R$93.00</p>
@@ -154,6 +180,8 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
+                        </div>
+                        <div>
                             <div>
                                 <h3>Bacon</h3>
                                 <p>R$92.00</p>
@@ -171,9 +199,9 @@
                                     <button>-</button> <p>1</p> <button>+</button>
                                 </div>
                             </div>
-                            
-                        
                         </div>
+                    </div>
+                        
                 </div>
     
             </article>

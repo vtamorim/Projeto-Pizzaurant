@@ -8,7 +8,7 @@
     'opsz' 24;
 }
 
-@font-face {
+@font-face { /* Fonte dos "italic_title" */
     font-family: "Dancing Script";
     src: url("../fonts/dancing_script.ttf");
 }
@@ -16,8 +16,10 @@
 :root {
     --yellow-1: #FEA115;
     --yellow-2: #FF8800;
+    --yellow-3: #FF7300;
     --purple-dark: #070523;
     --purple-light: #3D3979;
+    --purple-light-2: #4F4B8D;
     --background: #FFFEF6;
     --gray-1: #F0F0F0;
     --gray-2: #E5E5E5;

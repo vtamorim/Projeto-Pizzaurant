@@ -33,11 +33,11 @@ header nav a {
 }
 
 header nav a.current-page {
-    color: var(--yellow-1);
+    color: var(--yellow-2);
 }
 
 header nav a:hover {
-    color: var(--yellow-1);
+    color: var(--yellow-3);
 }
 
 header nav a::before {
@@ -45,7 +45,7 @@ header nav a::before {
 }
 
 header nav a.current-page::before {
-    background-color: var(--yellow-1);
+    background-color: var(--yellow-2);
 }
 
 header nav a::before { /* "Linha" que fica embaixo dos botões do Menu. Feitos usando uma pequena "Gambiarra" com os "::before"" do CSS. */
@@ -62,19 +62,19 @@ header nav a::before { /* "Linha" que fica embaixo dos botões do Menu. Feitos u
 header nav a:hover::before { /* Quando ocorrer um ":hover", o "::before" aumentará de tamanho para 100% (total do botão) e sairá da posição "left: 50%" (deixa ele no meio do botão) e irá para 0% (começo), dando um efeito de que ele surgiu do meio do botão. */
     left: 0%; /* Muda a posição dele para o começo ao mesmo tempo que expande, dando uma impressão que ele surgiu do "meio" do botão. */
     width: 100%;
-    background-color: var(--yellow-1);
+    background-color: var(--yellow-3);
 }
 
 header > a {
     display: inline-block;
     padding: .4rem .6rem;
     border-radius: .4rem;
-    background-color: var(--yellow-1);
+    background-color: var(--yellow-2);
     box-shadow: 0 0 .2rem var(--shadow);
     transition: background-color .5s ease, box-shadow .5s ease;
 }
 
 header > a:hover {
-    background-color: var(--yellow-2);
+    background-color: var(--yellow-3);
     box-shadow: 0 0 .5rem var(--shadow);
 }

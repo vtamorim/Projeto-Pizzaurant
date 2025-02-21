@@ -52,13 +52,13 @@ main section h3.italic_title {
     display: inline-block;
     padding: .4rem .6rem;
     border-radius: .4rem;
-    background-color: var(--yellow-1);
+    background-color: var(--yellow-2);
     box-shadow: 0 0 .2rem var(--shadow);
     transition: background-color .5s ease, box-shadow .5s ease;
 }
 
 .hero a:hover {
-    background-color: var(--yellow-2);
+    background-color: var(--yellow-3);
     box-shadow: 0 0 .5rem var(--shadow);
 }
 
@@ -171,7 +171,6 @@ main section h3.italic_title {
 .booking {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: 0 calc((100% - 1100px) / 2);
     background-color: var(--purple-dark);
     box-shadow: 0 0 .5rem var(--shadow);
 }
@@ -188,7 +187,7 @@ main section h3.italic_title {
 
 .booking form h3 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .booking fieldset {
@@ -223,10 +222,21 @@ main section h3.italic_title {
     outline: 0;
     background-color: var(--purple-light);
     box-shadow: 0 0 .2rem var(--shadow);
+    transition: background-color .5s ease, box-shadow .5s ease;
 }
 
-.booking input[type="number"]::-webkit-outer-spin-button, .booking input[type="number"]::-webkit-inner-spin-button {
+.booking :where(input, select):focus {
+    background-color: var(--purple-light-2);
+    box-shadow: 0 0 .3rem var(--shadow);
+}
+
+.booking input[type="number"]::-webkit-outer-spin-button, 
+.booking input[type="number"]::-webkit-inner-spin-button { /* Sumir com as setas do "input:number" */
     appearance: none;
+}
+
+.booking input[type="number"] { /* Sumir com as setas do "input:number" (Firefox) */
+    appearance: textfield;
 }
 
 .booking input::placeholder {
@@ -237,7 +247,7 @@ main section h3.italic_title {
     width: 100%;
     font-size: 1.1rem;
     color: var(--gray-1);
-    padding: .3rem;
+    padding-block: .5rem;
     border: 0;
     border-radius: .3rem;
     margin-top: 1rem;
