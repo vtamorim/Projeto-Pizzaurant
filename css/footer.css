@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+footer {
+    color: var(--gray-1);
+    padding: 1rem calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
+    background-color: var(--purple-dark);
+}
+
+footer h3 {
+    color: var(--yellow-1);
+    font-size: 2.5rem;
+    font-family: var(--font-title);
+    margin-bottom: 1rem;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 3rem;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul a, footer address a {
+    color: var(--gray-1);
+    text-decoration: none;
+}
+
+footer ul a:hover, footer address a:hover span:last-child {
+    text-decoration: underline;
+}
+
+footer p:has(time) {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+footer address a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .2rem;
+    margin-bottom: .2rem;
+}
+
+footer > p {
+    text-align: center;
+    margin-top: 1rem;
+}

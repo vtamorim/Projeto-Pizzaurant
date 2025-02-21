@@ -7,11 +7,11 @@
         <title>Pizzaurant - Sua Pizza Favorita está aqui!</title>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     </head>
-
     <body>
         <header>
             <h1><img src="../images/logo.svg" alt="Logotipo da Pizzaurant"></h1>
@@ -70,9 +70,9 @@
                 </div>
             </section>
 
-            <section>
+            <section class="about-us">
                 <figure>
-                    <img src="" alt="">
+                    <img src="../images/restaurant_img_1.png" alt="Imagem de dentro de um dos restaurantes do Pizzaurant.">
                 </figure>
                 
                 <div>
@@ -86,201 +86,210 @@
                 </div>
                 
                 <figure>
-                    <img src="" alt="">
+                    <img src="../images/restaurant_img_2.png" alt="Imagem de dentro de um dos restaurantes do Pizzaurant.">
                 </figure>
             </section>
             
-            <section>
+            <section class="menu">
                 <h3 class="italic_title">Pedidos Mais Populares</h3>
 
                 <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-
                     <div>
-                        <h4>Mussarela</h4>
-                        <p>Molho de tomate, queijo mussarela e orégano</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
+                        <figure>
+                            <img src="../images/popular_pizza_1.png" alt="Pizza de Mussarela">
+                        </figure>
 
-                    <div>
-                        <h4>Calabresa</h4>
-                        <p>Molho de tomate, queijo mussarela, calabresa fatiada e cebola.</p>
+                        <div>
+                            <h4>Mussarela</h4>
+                            <p>Molho de tomate, queijo mussarela e orégano</p>
+                        </div>
                     </div>
-                </div>
-
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
                     
                     <div>
-                        <h4>Marguerita</h4>
-                        <p>Molho de tomate, queijo mussarela, manjericão e rodelas de tomate.</p>
+                        <figure>
+                            <img src="../images/popular_pizza_2.png" alt="Pizza de Calabresa">
+                        </figure>
+
+                        <div>
+                            <h4>Calabresa</h4>
+                            <p>Molho de tomate, queijo mussarela, calabresa fatiada e cebola.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <figure>
+                            <img src="../images/popular_pizza_3.png" alt="Pizza de Marguerita">
+                        </figure>
+                    
+                        <div>
+                            <h4>Marguerita</h4>
+                            <p>Molho de tomate, queijo mussarela, manjericão e rodelas de tomate.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442.0329049542!2d-35.205669487473344!3d-5.810237918514107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff513c45a1a3%3A0xddf0edd04704b903!2sRestaurante%20nas%20Docas!5e0!3m2!1spt-BR!2sbr!4v1739539402492!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <section class="booking">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d482.04028510705115!2d-35.20575700623022!3d-5.810244787213179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff513c45a1a3%3A0xddf0edd04704b903!2sRestaurante%20nas%20Docas!5e0!3m2!1spt-BR!2sbr!4v1740102555870!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 
                 <form action="#">
                     <h3 class="italic_title">Reserve uma Mesa Online</h3>
                     
                     <fieldset>
-                        <input type="text" placeholder="Seu Nome" required>
-                        <input type="email" placeholder="Seu email" required>
-                    </fieldset>
-
-                    <fieldset>
-                        <input type="datetime-local" placeholder="Data e Hora" required>
-                        <input type="number" placeholder="Quant. Pessoas" required>
+                        <label><span class="material-symbols-outlined">account_circle</span> <input type="text" placeholder="Seu Nome" required></label>
+                        <label><span class="material-symbols-outlined">mail</span> <input type="email" placeholder="Seu email" required></label>
+                        <label><span class="material-symbols-outlined">calendar_month</span> <input type="datetime-local" placeholder="Data e Hora" required></label>
+                        <label><span class="material-symbols-outlined">group</span> <input type="number" placeholder="Quant. Pessoas" required min="0" max="20" value="0"></label>
                     </fieldset>
                     
-                    <select name="local" id="select_local" required>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
+                    <label>
+                        <span class="material-symbols-outlined">location_on</span>
+                        <select name="local" id="select_local" required>
+                            <option value="none" selected disabled>--- Restaurante - Local ---</option>
+                            <option value="restaurant1">Restaurante das Docas</option>
+                            <option value="restaurant2">Restaurante Sadoche</option>
+                            <option value="restaurant3">Restaurante Mangai</option>
+                            <option value="restaurant4">Tirol Pizzaria</option>
+                        </select>
+                    </label>
                     
                     <button type="submit">Reserve Agora</button>
                 </form>
             </section>
 
-            <section>
+            <section class="team">
                 <h3 class="italic_title">Nossa Equipe</h3>
                 
                 <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
+                    <div>
+                        <figure>
+                            <img src="../images/employer1.png" alt="Imagem do Empregado Jorge Almeida">
+                        </figure>
 
-                    <h4>Jorge Almeida</h4>
-                    <p>Chef de Cozinha</p>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
+                        <h4>Jorge Almeida</h4>
+                        <p>Chef de Cozinha</p>
+                    </div>
+                    
+                    <div>
+                        <figure>
+                            <img src="../images/employer2.png" alt="Imagem do Empregado Raimundo José">
+                        </figure>
 
-                    <h4>Raimundo José</h4>
-                    <p>Chef de Cozinha</p>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
+                        <h4>Raimundo José</h4>
+                        <p>Chef de Cozinha</p>
+                    </div>
+                    
+                    <div>
+                        <figure>
+                            <img src="../images/employer3.png" alt="Imagem do Empregado Arlindo Torres">
+                        </figure>
 
-                    <h4>Arlindo Torres</h4>
-                    <p>Chef de Cozinha</p>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
+                        <h4>Arlindo Torres</h4>
+                        <p>Chef de Cozinha</p>
+                    </div>
+                    
+                    <div>
+                        <figure>
+                            <img src="../images/employer4.png" alt="Imagem da Empregada Jéssica Ninda">
+                        </figure>
 
-                    <h4>Jéssica Ninda</h4>
-                    <p>Chef de Cozinha</p>
+                        <h4>Jéssica Ninda</h4>
+                        <p>Chef de Cozinha</p>
+                    </div>
                 </div>
             </section>
             
-            <section>
+            <section class="testimonials">
                 <h3 class="italic_title">Depoimentos</h3>
                 
                 <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    
-                    <p>Fiquei muito satisfeita com a pizza! A entrega foi super rápida e o sabor estava incrível. Já vou recomendar para todos os meus amigos!</p>
-                    
                     <div>
                         <figure>
-                            <img src="" alt="">
+                            <img src="../images/mark.svg" alt="Ícone de Aspas">
                         </figure>
+                    
+                        <p>Fiquei muito satisfeita com a pizza! A entrega foi super rápida e o sabor estava incrível. Já vou recomendar para todos os meus amigos!</p>
+                    
+                        <div>
+                            <figure>
+                                <img src="../images/customer1.png" alt="Imagem de Perfil do Cliente 1">
+                            </figure>
 
-                        <p>Maria Antonieta</p>
+                            <p>Maria Antonieta</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    
-                    <p>A experiência foi maravilhosa! O atendimento foi impecável e a comida estava deliciosa. Com certeza voltarei mais vezes!</p>
                     
                     <div>
                         <figure>
-                            <img src="" alt="">
+                            <img src="../images/mark.svg" alt="Ícone de Aspas">
                         </figure>
+                    
+                        <p>A experiência foi maravilhosa! O atendimento foi impecável e a comida estava deliciosa. Com certeza voltarei mais vezes!</p>
+                    
+                        <div>
+                            <figure>
+                                <img src="../images/customer2.png" alt="Imagem de Perfil do Cliente 2">
+                            </figure>
 
-                        <p>Lucas Marcelo</p>
+                            <p>Lucas Marcelo</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    
-                    <p>A melhor pizzaria que já visitei! Tudo, desde o atendimento até a pizza, foi excelente. Já estou ansioso para a próxima visita!</p>
                     
                     <div>
                         <figure>
-                            <img src="" alt="">
+                            <img src="../images/mark.svg" alt="Ícone de Aspas">
                         </figure>
+                    
+                        <p>A melhor pizzaria que já visitei! Tudo, desde o atendimento até a pizza, foi excelente. Já estou ansioso para a próxima visita!</p>
+                    
+                        <div>
+                            <figure>
+                                <img src="../images/customer3.png" alt="Imagem de Perfil do Cliente 3">
+                            </figure>
 
-                        <p>Carlos da Silva</p>
+                            <p>Carlos da Silva</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
         
         <footer>
-            <section>
-                <h3>Companhia</h3>
+            <div>
+                <section>
+                    <h3>Companhia</h3>
 
-                <ul>
-                    <li><a href="#">Cardápio</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contatos</a></li>
-                    <li><a href="#">Reservar</a></li>
-                </ul>
-            </section>
+                    <ul>
+                        <li><a href="#">Cardápio</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#">Reservar</a></li>
+                    </ul>
+                </section>
 
-            <section>
-                <h3>Abertura</h3>
+                <section>
+                    <h3>Abertura</h3>
                 
-                <p>Segunda - Sábado</p>
-                <p><time datetime="9:00">9:00</time> - <time datetime="21:00">21:00</time></p>
+                    <p>Segunda - Sábado</p>
+                    <p><time datetime="9:00">9:00</time> - <time datetime="21:00">21:00</time></p>
+                    
+                    <p>Domingo</p>
+                    <p><time datetime="10:00">10:00</time> - <time datetime="20:00">20:00</time></p>
+                </section>
 
-                <p>Domingo</p>
-                <p><time datetime="10:00">10:00</time> - <time datetime="20:00">20:00</time></p>
-            </section>
+                <section>
+                    <h3>Contato</h3>
 
-            <section>
-                <h3>Contato</h3>
-
-                <address>
-                    <a href="#"><span></span> 344 R. São Joaquim, Natal, Brasil</a>
-                    <a href="#"><span></span> +55 84 98765-4321</a>
-                    <a href="#"><span></span> pizzaurantcontato@gmail.com</a>
-                </address>
-            </section>
+                    <address>
+                        <a href="#"><span class="material-symbols-outlined">location_on</span> <span>344 R. São Joaquim, Natal, Brasil</span></a>
+                        <a href="#"><span class="material-symbols-outlined">call</span> <span>+55 84 98765-4321</span></a>
+                        <a href="#"><span class="material-symbols-outlined">mail</span> <span>pizzaurantcontato@gmail.com</span></a>
+                    </address>
+                </section>
+            </div>
             
-            <p>© 2025 - Pizzaurant por João Rafael e Victor Miguel | Todos os Direitos Reservados | IFRN - CNAT</p>
+            <p>© 2025 - Pizzaurant por <strong>João Rafael e Victor Miguel</strong> | Todos os Direitos Reservados | IFRN - CNAT</p>
         </footer>
     </body>
 </html>

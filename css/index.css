@@ -4,12 +4,16 @@ body {
     background-color: var(--background);
 }
 
-.hero, main > section, footer {
+.hero, main > section {
     padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
 }
 
 main section, footer {
     margin-top: 4rem;
+}
+
+main section h3.italic_title {
+    font-size: 2.5rem;
 }
 
 .hero {
@@ -88,4 +92,237 @@ main section, footer {
 
 .services p {
     color: var(--gray-4);
+}
+
+.about-us {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-us figure img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem var(--shadow);
+}
+
+.about-us :where(h3, h4, p) {
+    margin-bottom: .75rem;
+}
+
+.about-us h4 {
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+}
+
+.about-us a {
+    color: var(--gray-1);
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: .3rem .6rem;
+    border-radius: .3rem;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .2rem var(--shadow);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+.about-us a:hover {
+    background-color: var(--yellow-2);
+    box-shadow: 0 0 .4rem var(--shadow);
+}
+
+.menu h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Precisar MUITO ser melhorado */
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.menu > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--gray-2);
+    box-shadow: 0 0 .3rem var(--shadow);
+}
+
+.menu > div > div figure img {
+    height: 7rem; /* Melhorar isso aq dps */
+    border-radius: .3rem;
+    box-shadow: 0 0 .3rem var(--shadow);
+}
+
+.menu > div > div h4 {
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+}
+
+.booking {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0 calc((100% - 1100px) / 2);
+    background-color: var(--purple-dark);
+    box-shadow: 0 0 .5rem var(--shadow);
+}
+
+.booking iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.booking form {
+    width: 100%;
+    padding: 3rem;
+}
+
+.booking form h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.booking fieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    gap: 1rem;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.booking label {
+    position: relative;
+}
+
+.booking label span {
+    color: var(--gray-1);
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: .2rem;
+    transform: translateY(-50%);
+}
+
+.booking :where(input, select) {
+    width: 100%;
+    color: var(--gray-1);
+    font-size: 1.2rem;
+    padding: .5rem;
+    padding-left: 2.4rem;
+    border: 0;
+    border-radius: .2rem;
+    outline: 0;
+    background-color: var(--purple-light);
+    box-shadow: 0 0 .2rem var(--shadow);
+}
+
+.booking input[type="number"]::-webkit-outer-spin-button, .booking input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.booking input::placeholder {
+    color: var(--gray-1);
+}
+
+.booking button {
+    width: 100%;
+    font-size: 1.1rem;
+    color: var(--gray-1);
+    padding: .3rem;
+    border: 0;
+    border-radius: .3rem;
+    margin-top: 1rem;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .2rem var(--shadow);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+.booking button:hover {
+    background-color: var(--yellow-2);
+    box-shadow: 0 0 .4rem var(--shadow);
+    cursor: pointer;
+}
+
+.team h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.team > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    gap: 3rem;
+}
+
+.team > div > div {
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem var(--shadow);
+    background-color: var(--gray-2);
+}
+
+.team > div > div figure img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 .4rem var(--shadow);
+}
+
+.team > div > div h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials h3 {
+    text-align: center; /* Talvez isso esteja se repetindo várias vezes */
+    margin-bottom: 1rem;
+}
+
+.testimonials > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    gap: 3rem;
+}
+
+.testimonials > div > div {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--gray-2);
+    box-shadow: 0 0 .5rem var(--shadow);
+}
+
+.testimonials > div > div > figure img {
+    width: 10%;
+}
+
+.testimonials > div > div > div {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonials > div > div > p {
+    margin-block: .5rem;
+}
+
+.testimonials > div > div > div > figure {
+    width: 13%;
+}
+
+.testimonials > div > div > div > figure img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 .3rem var(--shadow);
 }

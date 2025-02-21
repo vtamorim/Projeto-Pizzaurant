@@ -15,7 +15,7 @@
 
 :root {
     --yellow-1: #FEA115;
-    --yellow-2: #ff8800;
+    --yellow-2: #FF8800;
     --purple-dark: #070523;
     --purple-light: #3D3979;
     --background: #FFFEF6;
@@ -34,4 +34,9 @@
     font-family: var(--font-base);
     margin: 0;
     padding: 0;
+}
+
+.italic_title {
+    font-family: var(--font-title);
+    color: var(--yellow-1);
 }
