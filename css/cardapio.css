@@ -55,10 +55,24 @@ hr{
 #lista_cardapio > div {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
 }
 #lista_cardapio > div > div{
-    height: 10em;
-    background-color: aqua;
+    height: 6em;
     width: 30em;
+}
+.quantity{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  
+}
+.quantity button{
+    background-color: transparent;
+    border: 0;
+
+}
+.quantity p{
+    border-bottom: 1px solid black;
 }
