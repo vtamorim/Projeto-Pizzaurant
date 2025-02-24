@@ -1,5 +1,5 @@
 main{
-    height: 30em;
+    height: 27em;
 }
 
 main article{
@@ -8,7 +8,7 @@ main article{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     place-items: center;
-    margin-top: 10em;
+    margin-top: 4em;
     width: 100%;
 }
 main article div{
@@ -30,7 +30,7 @@ main article p{
     position: relative;
     top: 1em;
 }
-.title{
+ main .title{
     margin-left: 1em;
 }
 .hero div{
