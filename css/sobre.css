@@ -1,0 +1,69 @@
+
+.hero, main,article > section {
+    padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
+}
+#images{
+    display: flex;
+    gap: 20px;
+}
+#images img{
+    height: 28em;
+}
+
+#start_about{
+    display: flex;
+    gap: 10px;
+}
+#start_about h2{
+    font-size: 2em;
+}
+#welcome div{
+    font-size: 1.1em;
+    display: block;
+    margin-top: 1em;
+}
+#welcome ul{
+    margin-top: 2em;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+}
+#welcome ul li{
+    height: 5em;
+    display: flex;
+    padding-left: 12px;
+    border-left: 1em solid #FEA115;
+}
+#welcome ul>li>span{
+    float: left;
+    color: var(--yellow-1);
+    font-size: 4em;
+    height: 1.2em;
+    background-color: aqua;
+    text-align: center;
+    margin-right: 1em;
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+    gap: 40px;
+}
+.menor{
+    flex-grow: 1;
+}
+.grande{
+    flex-grow:  1;
+    flex-basis: 400;
+
+}
+
+.item{
+    background-color: tomato;
+
+}
+.container{
+    gap: 1em;
+    flex-wrap: wrap;
+    max-width: 400px;
+    display: flex;
+}

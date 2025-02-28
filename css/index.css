@@ -4,7 +4,7 @@ body {
     background-color: var(--background);
 }
 
-.hero, main > section {
+.hero, main,article > section {
     padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
 }
 
