@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-body {
-    background-color: var(--background);
+@property --loader-angle { /* Variável para o "giramento" do ícone de carregamento do botão de enviar reserva (formulário). */
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
 }
 
-.hero, main,article > section {
+main > section {
     padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
 }
 
@@ -12,29 +14,23 @@ main section, footer {
     margin-top: 4rem;
 }
 
-main section h3.italic_title {
-    font-size: 2.5rem;
-}
-
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 6fr 5fr;
     gap: 3rem;
-    padding-block: 4rem;
-    background-image: url("../images/background.png");
+    align-items: center;
 }
 
 .hero figure img {
-    width: 30rem;
-}
-
-.hero :where(h2, p, a) {
-    color: var(--gray-1);
+    position: relative;
+    left: 0;
+    width: 100%;
+    animation: ImgUpDown 2s ease-in-out infinite;
 }
 
 .hero h2 {
-    font-size: 4rem;
+    color: var(--gray-1);
 }
 
 .hero h2 span {
@@ -42,24 +38,25 @@ main section h3.italic_title {
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-block: 1rem;
+    max-width: max-content;
+    margin-inline: 0;
 }
 
 .hero a {
+    color: var(--gray-1);
     font-size: 1.1rem;
     text-decoration: none;
     display: inline-block;
     padding: .4rem .6rem;
     border-radius: .4rem;
     background-color: var(--yellow-2);
-    box-shadow: 0 0 .2rem var(--shadow);
-    transition: background-color .5s ease, box-shadow .5s ease;
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease, box-shadow .3s ease;
 }
 
 .hero a:hover {
     background-color: var(--yellow-3);
-    box-shadow: 0 0 .5rem var(--shadow);
+    box-shadow: 0 0 .2rem var(--shadow);
 }
 
 .services {
@@ -73,7 +70,7 @@ main section h3.italic_title {
     padding: 1rem;
     border-radius: .5rem;
     background-color: var(--gray-2);
-    box-shadow: 0 0 .2rem var(--shadow);
+    box-shadow: 0 0 .12rem var(--shadow);
 }
 
 .services h3 {
@@ -105,11 +102,11 @@ main section h3.italic_title {
 .about-us figure img {
     width: 100%;
     border-radius: .5rem;
-    box-shadow: 0 0 .5rem var(--shadow);
+    box-shadow: 0 0 .12rem var(--shadow);
 }
 
 .about-us :where(h3, h4, p) {
-    margin-bottom: .75rem;
+    margin-bottom: .8rem;
 }
 
 .about-us h4 {
@@ -125,13 +122,13 @@ main section h3.italic_title {
     padding: .3rem .6rem;
     border-radius: .3rem;
     background-color: var(--yellow-1);
-    box-shadow: 0 0 .2rem var(--shadow);
-    transition: background-color .5s ease, box-shadow .5s ease;
+    box-shadow: 0 0 .12rem var(--shadow);
+    transition: background-color .3s ease, box-shadow .3s ease;
 }
 
 .about-us a:hover {
     background-color: var(--yellow-2);
-    box-shadow: 0 0 .4rem var(--shadow);
+    box-shadow: 0 0 .15rem var(--shadow);
 }
 
 .menu h3 {
@@ -141,30 +138,29 @@ main section h3.italic_title {
 
 .menu > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Precisar MUITO ser melhorado */
-    justify-content: space-between;
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
 }
 
 .menu > div > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     gap: 1rem;
+    width: 100%;
     padding: 1rem;
     border-radius: .5rem;
     background-color: var(--gray-2);
-    box-shadow: 0 0 .3rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
 }
 
 .menu > div > div figure img {
-    height: 7rem; /* Melhorar isso aq dps */
+    width: 100%; /* Melhorar isso aq dps */
     border-radius: .3rem;
-    box-shadow: 0 0 .3rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
 }
 
 .menu > div > div h4 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-bottom: .5rem;
 }
 
@@ -172,7 +168,7 @@ main section h3.italic_title {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--purple-dark);
-    box-shadow: 0 0 .5rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
 }
 
 .booking iframe {
@@ -192,7 +188,7 @@ main section h3.italic_title {
 
 .booking fieldset {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); /* Precisar MUITO ser melhorado */
     gap: 1rem;
     border: 0;
     margin-bottom: 1rem;
@@ -212,22 +208,22 @@ main section h3.italic_title {
 }
 
 .booking :where(input, select) {
-    width: 100%;
     color: var(--gray-1);
     font-size: 1.2rem;
+    width: 100%;
     padding: .5rem;
     padding-left: 2.4rem;
     border: 0;
     border-radius: .2rem;
     outline: 0;
     background-color: var(--purple-light);
-    box-shadow: 0 0 .2rem var(--shadow);
-    transition: background-color .5s ease, box-shadow .5s ease;
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease, box-shadow .3s ease;
 }
 
 .booking :where(input, select):focus {
     background-color: var(--purple-light-2);
-    box-shadow: 0 0 .3rem var(--shadow);
+    box-shadow: 0 0 .2rem var(--shadow);
 }
 
 .booking input[type="number"]::-webkit-outer-spin-button, 
@@ -243,33 +239,101 @@ main section h3.italic_title {
     color: var(--gray-1);
 }
 
-.booking button {
-    width: 100%;
+.booking #button-book {
     font-size: 1.1rem;
     color: var(--gray-1);
+    width: 100%;
     padding-block: .5rem;
     border: 0;
     border-radius: .3rem;
     margin-top: 1rem;
-    background-color: var(--yellow-1);
-    box-shadow: 0 0 .2rem var(--shadow);
-    transition: background-color .5s ease, box-shadow .5s ease;
+    background-color: var(--yellow-2);
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease, box-shadow .3s ease;
 }
 
-.booking button:hover {
-    background-color: var(--yellow-2);
-    box-shadow: 0 0 .4rem var(--shadow);
+.booking #button-book:hover {
+    background-color: var(--yellow-3);
+    box-shadow: 0 0 .2rem var(--shadow);
     cursor: pointer;
+}
+
+.booking #button-book span { /* Para animação de "surgimento". */
+    height: 0;
+    transition: height .3s ease;
+}
+
+.booking #button-book span.loader { /* Ícone de Carregamento */
+    vertical-align: middle;
+    display: inline-block;
+    height: 1.3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-right: .3rem;
+    background-image: conic-gradient(from var(--loader-angle), #f0f0f000, #f0f0f000, #f0f0f080, var(--gray-1));
+    animation: LoaderRotation 1s linear infinite;
+    position: relative;
+}
+
+.booking #button-book span.loader::before {
+    content: "";
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--yellow-2);
+    transition: background-color .3s ease;
+}
+
+.booking #button-book:hover span.loader::before {
+    background-color: var(--yellow-3);
+}
+
+.booking #button-book span.loaded {
+    vertical-align: middle;
+    display: inline-block;
+    height: 1.3rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .3rem;
+    position: relative;
+}
+
+.booking #button-book span.loaded::before,
+.booking #button-book span.loaded::after {
+    content: "";
+    height: 20%;
+    position: absolute;
+    transform-origin: center;
+    background-color: var(--gray-1);
+    animation: CheckerVisibility .3s ease;
+}
+
+.booking #button-book span.loaded::before {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.booking #button-book span.loaded::after {
+    width: 50%;
+    top: 60%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .team h3 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .team > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    grid-template-columns: repeat(auto-fit, minmax(14.2rem, 1fr)); /* Precisar MUITO ser melhorado */
+    align-items: baseline;
     gap: 3rem;
 }
 
@@ -278,24 +342,63 @@ main section h3.italic_title {
     width: 100%;
     padding: 1.5rem;
     border-radius: .5rem;
-    box-shadow: 0 0 .5rem var(--shadow);
+    margin-bottom: calc(3.5ch + 1.5rem);
+    box-shadow: 0 0 .1rem var(--shadow);
     background-color: var(--gray-2);
+    transition: margin-bottom .3s ease;
 }
 
 .team > div > div figure img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 .4rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
 }
 
 .team > div > div h4 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
+}
+
+.team > div > div ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    height: 0;
+    overflow-y: hidden;
+    transition: height .3s ease;
+}
+
+.team > div > div ul a {
+    color: var(--gray-1);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5ch;
+    aspect-ratio: 1 / 1;
+    background-color: var(--yellow-1);
+    border-radius: 50%;
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease;
+}
+
+.team > div > div:hover {
+    margin-bottom: 0;
+}
+
+.team > div > div:hover ul {
+    height: auto;
+}
+
+.team > div > div ul a:hover {
+    background-color: var(--yellow-2);
 }
 
 .testimonials h3 {
     text-align: center; /* Talvez isso esteja se repetindo várias vezes */
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .testimonials > div {
@@ -308,7 +411,7 @@ main section h3.italic_title {
     padding: 1rem;
     border-radius: .5rem;
     background-color: var(--gray-2);
-    box-shadow: 0 0 .5rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
 }
 
 .testimonials > div > div > figure img {
@@ -334,5 +437,35 @@ main section h3.italic_title {
 .testimonials > div > div > div > figure img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 .3rem var(--shadow);
+    box-shadow: 0 0 .1rem var(--shadow);
+}
+
+@keyframes ImgUpDown {
+    0% {
+        top: -.4rem;
+    }
+    50% {
+        top: .4rem;
+    }
+    100% {
+        top: -.4rem;
+    }
+}
+
+@keyframes LoaderRotation {
+    from {
+        --loader-angle: 0deg;
+    }
+    to {
+        --loader-angle: 360deg;
+    }
+}
+
+@keyframes CheckerVisibility {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: var(--gray-1);
+    }
 }

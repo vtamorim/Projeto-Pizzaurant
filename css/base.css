@@ -32,13 +32,23 @@
 }
 
 *, *::before, *::after {
+    interpolate-size: allow-keywords;
     box-sizing: border-box;
     font-family: var(--font-base);
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+}
+
 .italic_title {
     font-family: var(--font-title);
+    font-size: 2.5rem;
     color: var(--yellow-1);
 }

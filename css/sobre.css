@@ -1,7 +1,4 @@
 
-.hero, main,article > section {
-    padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
-}
 #images{
     display: flex;
     gap: 20px;
