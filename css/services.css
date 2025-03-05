@@ -1,0 +1,32 @@
+main article {
+    padding-inline: calc((100% - 1100px) / 2); /* Pra tudo ficar alinhado na esquerda e direita. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /*  */
+    gap: 2rem;
+    margin-block: 4rem;
+}
+
+main article div {
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--gray-2);
+    box-shadow: 0 0 .12rem var(--shadow);
+}
+
+main article h3 {
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+main article h3 span:first-child {
+    color: var(--yellow-1);
+    font-size: 4rem;
+}
+
+main article p {
+    color: var(--gray-4);
+}
