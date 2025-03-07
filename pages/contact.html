@@ -2,14 +2,14 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pizzaurant - Serviços</title>
+        <title>Pizzaurant - Contato</title>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/header_hero.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/services.css">
+        <link rel="stylesheet" href="../css/contact.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -18,11 +18,11 @@
             
             <nav>
                 <ul>
-                    <li><a href="index.html" >Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="cardapio.html">Cardápio</a></li>
-                    <li><a href="services.html" class="current-page">Serviços</a></li>
+                    <li><a href="services.html">Serviços</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="contact.html" class="current-page">Contato</a></li>
                 </ul>
             </nav>
             
@@ -30,63 +30,66 @@
         </header>
 
         <section class="hero">
-            <h2>Serviços</h2>
+            <h2>Contato</h2>
 
-            <p>Precisa de um horário reservado para você? Nosso sistema de agendamento permite que você marque um serviço de forma rápida e sem complicações.</p>
+            <p>Precisar nos contactar? Logo abaixo terá todas as formas disponíveis para você.</p>
         </section>
 
         <main>
-            <article>
+            <section class="contact-forms">
                 <div>
-                    <h3><span class="material-symbols-outlined">person</span> Chefes Experientes</h3>
+                    <a href="#"><span class="material-symbols-outlined">location_on</span></a>
 
-                    <p>Nossa equipe é composta por chefes experientes que cozinharão a melhor pizza para você.</p>
-                </div>
-                
-                <div>
-                    <h3><span class="material-symbols-outlined">delivery_truck_speed</span> Entrega Rápida e Online</h3>
+                    <div>
+                        <h3>Endereço Principal</h3>
 
-                    <p>Nós também fazemos entregas totalmente online e de forma rápida para você aproveitar a sua pizza!</p>
-                </div>
-
-                <div>
-                    <h3><span class="material-symbols-outlined">support_agent</span> Atendimento Personalizado</h3>
-
-                    <p>Valorizamos cada cliente e nos dedicamos para que você tenha a melhor experiência possível!</p>
+                        <address>
+                            344 R. São Joaquim
+                            Tirol, Natal - RN
+                            59022-240
+                        </address>
+                    </div>
                 </div>
 
                 <div>
-                    <h3><span class="material-symbols-outlined">checkbook</span> Reserva à Distância</h3>
+                    <a href="#"><span class="material-symbols-outlined">call</span></a>
 
-                    <p>Reserve uma mesa nos nossos restaurantes de forma completamente online pelo nosso site.</p>
-                </div>
-                
-                <div>
-                    <h3><span class="material-symbols-outlined">nightlife</span> Sabor Autêntico</h3>
-
-                    <p>Com receitas tradicionais e um toque especial, nossas pizzas trazem o verdadeiro sabor italiano direto para a sua mesa.</p>
-                </div>
-                
-                <div>
-                    <h3><span class="material-symbols-outlined">relax</span> Ambiente Aconchegante</h3>
-
-                    <p>Desfrute de um ambiente acolhedor e descontraído, perfeito para momentos especiais com amigos ou família.</p>
-                </div>
-                
-                <div>
-                    <h3><span class="material-symbols-outlined">fork_spoon</span> Variedade no Cardápio</h3>
-
-                    <p>Além das tradicionais, oferecemos uma ampla variedade de sabores, para agradar a todos os gostos.</p>
+                    <div>
+                        <h3>Telefone</h3>
+                        
+                        <address>
+                            +55 84 98765-4321
+                        </address>
+                    </div>
                 </div>
 
                 <div>
-                    <h3><span class="material-symbols-outlined">handshake</span> Preparação Artesanal</h3>
+                    <a href="#"><span class="material-symbols-outlined">mail</span></a>
 
-                    <p>Cada pizza é feita com muito carinho e atenção, utilizando técnicas artesanais que realçam o sabor e a textura perfeitos.</p>
+                    <div>
+                        <h3>Email</h3>
+                        
+                        <address>
+                            pizzaurantcontato@gmail.com
+                        </address>
+                    </div>
                 </div>
-            </article>
+            </section>
+
+            <form action="#">
+                <h3>Enviar Mensagem</h3>
+
+                <fieldset>
+                    <label><span class="material-symbols-outlined">account_circle</span> <input type="text" placeholder="Seu Nome" required></label>
+                    <label><span class="material-symbols-outlined">mail</span> <input type="email" placeholder="Seu email" required></label>
+                </fieldset>
+
+                <textarea name="message" id="message" placeholder="Sua Mensagem" rows="7" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </main>
-        
+
         <footer>
             <div>
                 <section>

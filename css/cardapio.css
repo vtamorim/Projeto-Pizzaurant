@@ -1,63 +1,183 @@
-main{
-    font-family: var(--font-title);
+main section, footer {
+    margin-top: 4rem;
 }
 
-article ul{
-    display: flex;
-    justify-content:center;
-    list-style-type: none;
-    gap: 50px;
-    top: 4em;
+main section {
+    padding-inline: calc((100% - 1100px) / 2);
 }
-article ul li div span img{
-    width: 3em;
-}
-article ul li div{
-    display: flex;
-    align-items: center;
-}
-article ul li div div{
-    display: block;
-}
-article ul li div div span{
-    color: gray;
-}
-article ul li div div p{
-    font-weight: bold;
-    font-size: 1.3em;
-}
-hr{
-    top: 4em;
-    width: 48em;
-    margin-inline: auto;
+
+.itens_cardapio h2 {
+    text-align: center;
     margin-bottom: 2rem;
 }
-#lista_cardapio {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-#lista_cardapio > div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 
+.itens_cardapio > input[type="radio"] {
+    display: none;
 }
-#lista_cardapio > div > div{
-    height: 6em;
-    width: 30em;
-}
-.quantity{
+
+.option_selector {
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 10px;
-  
+    align-items: center;
+    gap: 2rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    width: min-content;
+    position: relative;
 }
-.quantity button{
-    background-color: transparent;
+
+.option_selector::before {
+    content: "";
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    border-radius: .1rem;
+    width: 100%;
+    height: .2rem;
+    background-color: var(--gray-2);
+}
+
+.option_selector label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.option_selector label > span:first-child {
+    color: var(--yellow-1);
+    font-size: 2.5rem;
+}
+
+.option_selector label > span:last-child > span {
+    display: block;
+}
+
+.option_selector label > span:last-child > span:first-child {
+    color: var(--gray-3);
+    font-size: .8rem;
+}
+
+.option_selector label > span:last-child > span:last-child {
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.itens_cardapio #option1:checked ~ .option_selector label[for="option1"]::before,
+.itens_cardapio #option2:checked ~ .option_selector label[for="option2"]::before,
+.itens_cardapio #option3:checked ~ .option_selector label[for="option3"]::before,
+.itens_cardapio #option4:checked ~ .option_selector label[for="option4"]::before {
+    content: "";
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    border-radius: .1rem;
+    width: 100%;
+    height: .2rem;
+    background-color: var(--yellow-1);
+}
+
+.cardapio_viewer {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.cardapio_viewer li {
+    display: none;
+}
+
+.itens_cardapio #option1:checked ~ .cardapio_viewer li.option1,
+.itens_cardapio #option2:checked ~ .cardapio_viewer li.option2,
+.itens_cardapio #option3:checked ~ .cardapio_viewer li.option3,
+.itens_cardapio #option4:checked ~ .cardapio_viewer li.option4 {
+    display: flex;
+}
+
+.cardapio_viewer li {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardapio_viewer figure {
+    width: 30%;
+}
+
+.cardapio_viewer figure img {
+    width: 100%;
+    border-radius: .2rem;
+    box-shadow: 0 0 .1rem var(--shadow);
+}
+
+.cardapio_viewer li > div {
+    width: 100%;
+}
+
+.cardapio_viewer li > div > p:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.cardapio_viewer li > div > p:first-child > span:first-child {
+    color: var(--black);
+}
+
+.cardapio_viewer li > div > p:first-child > span:last-child {
+    color: var(--purple-light-3);
+}
+
+.cardapio_viewer li > div > p:first-child > span:last-child::before {
+    content: "R$";
+}
+
+.cardapio_viewer li > div > p:nth-child(2) {
+    color: var(--gray-3);
+    padding-block: .5rem;
+    border-block: .3rem solid var(--gray-2);
+}
+
+.cardapio_viewer li > div > div {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardapio_viewer li > div > div > select {
+    font-size: 1.1rem;
     border: 0;
-
 }
-.quantity p{
-    border-bottom: 1px solid black;
+
+.cardapio_viewer li > div > div > input[type="number"] {
+    text-align: center;
+    font-size: 1.1rem;
+    border: 0;
+    border-bottom: .2rem solid var(--gray-3);
+    width: 25%;
+}
+
+.cardapio_viewer li > div > div > button {
+    color: var(--gray-1);
+    font-size: 1.1rem;
+    padding: .2rem .6rem;
+    border: 0;
+    border-radius: .2rem;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.cardapio_viewer li > div > div > button:hover {
+    background-color: var(--yellow-2);
 }

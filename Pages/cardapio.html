@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cardápio</title>
+        <title>Pizzaurant - Cardápio</title>
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/header_hero.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/cardapio.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -21,11 +22,11 @@
                     <li><a href="cardapio.html" class="current-page">Cardápio</a></li>
                     <li><a href="services.html">Serviços</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="contact.html">Contato</a></li>
                 </ul>
             </nav>
             
-            <a href="#">Reserve uma Mesa</a>
+            <a href="index.html#booking-section">Reserve uma Mesa</a>
         </header>
 
         <section class="hero">
@@ -35,176 +36,336 @@
         </section>
 
         <main>
-            <article>
+            <section class="itens_cardapio">
                 <h2 class="italic_title">Itens do Cardápio</h2>
 
-                <ul>
+                <input type="radio" name="option" id="option1" checked>
+                <input type="radio" name="option" id="option2">
+                <input type="radio" name="option" id="option3">
+                <input type="radio" name="option" id="option4">
+                
+                <ul class="option_selector">
                     <li>
-                        <div>
-                            <span><img src="../images/pizza.svg" alt="Pizza Icon"></span>
-                            <div>
+                        <label for="option1">
+                            <span class="material-symbols-outlined">local_pizza</span> 
+
+                            <span>
                                 <span>Pizzas</span>
-                                <p>Tradicionais</p>
+                                <span>Tradicionais</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="option2">
+                            <span class="material-symbols-outlined">icecream</span> 
+
+                            <span>
+                                <span>Pizzas</span>
+                                <span>Doces</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="option3">
+                            <span class="material-symbols-outlined">star</span> 
+
+                            <span>
+                                <span>Pizzas</span>
+                                <span>Especiais</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="option4">
+                            <span class="material-symbols-outlined">add</span> 
+
+                            <span>
+                                <span>Outros</span>
+                                <span>Adicionais</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+
+                <ul class="cardapio_viewer">
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/popular_pizza_1.png" alt="Imagem da Pizza de Mussarela">
+                        </figure>
+
+                        <div>
+                            <p><span>Mussarela</span> <span>90.00</span></p>
+
+                            <p>Molho de tomate, queijo mussarela e orégano.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/popular_pizza_2.png" alt="Imagem da Pizza de Calabresa">
+                        </figure>
+
                         <div>
-                            <span><img src="../images/icecream.svg" alt="Sorvete Icon"></span>
+                            <p><span>Calabresa</span> <span>95.00</span></p>
+
+                            <p>Molho de tomate, queijo mussarela, calabresa fatiada e cebola.</p>
+
                             <div>
-                                <span>Pizzas</span>
-                                <p>Doces</p>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/popular_pizza_3.png" alt="Imagem da Pizza de Marguerita">
+                        </figure>
+
                         <div>
-                            <span><img src="../images/star.svg" alt="Estrela Icon"></span>
+                            <p><span>Marguerita</span> <span>100.00</span></p>
+
+                            <p>Molho de tomate, queijo mussarela, manjericão e rodelas de tomate.</p>
+
                             <div>
-                                <span>Pizzas</span>
-                                <p>Especiais</p>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/pizza_4.png" alt="Imagem da Pizza Portuguesa">
+                        </figure>
+
                         <div>
-                            <span><img src="../images/more.svg" alt="+ icon"></span>
+                            <p><span>Portuguesa</span> <span>87.00</span></p>
+
+                            <p>Molho de tomate, queijo, presunto, ovo, cebola, ervilha e azeitona.</p>
+
                             <div>
-                                <span>Pizzas</span>
-                                <p>Adicionais</p>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/pizza_5.png" alt="Imagem da Pizza Napolitana">
+                        </figure>
+
+                        <div>
+                            <p><span>Napolitana</span> <span>93.00</span></p>
+
+                            <p>Molho de tomate, queijo mussarela, rodelas de tomate, parmesão e orégano.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option1">
+                        <figure>
+                            <img src="../images/pizza_6.png" alt="Imagem da Pizza Bacon">
+                        </figure>
+
+                        <div>
+                            <p><span>Bacon</span> <span>92.00</span></p>
+
+                            <p>Molho de tomate, queijo mussarela e bacon.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option2">
+                        <figure>
+                            <img src="../images/pizza_sweet_1.png" alt="Imagem da Pizza Doce de Chocolate Branco">
+                        </figure>
+
+                        <div>
+                            <p><span>Chocolate Branco</span> <span>72.00</span></p>
+
+                            <p>Coberta de Chocolate e com pedaços de chocolate branco em cima.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option2">
+                        <figure>
+                            <img src="../images/pizza_sweet_2.png" alt="Imagem da Pizza Doce de Chocolate com Morando">
+                        </figure>
+
+                        <div>
+                            <p><span>Chocolate com Morango</span> <span>68.00</span></p>
+
+                            <p>Coberta de Chocolate e com frutas de Morango em cima.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option3">
+                        <figure>
+                            <img src="../images/special_pizza_1.png" alt="Imagem da Pizza Especial de Pepperoni">
+                        </figure>
+
+                        <div>
+                            <p><span>Pepperoni</span> <span>72.00</span></p>
+
+                            <p>Pepperoni e Queijo.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option3">
+                        <figure>
+                            <img src="../images/special_pizza_2.png" alt="Imagem da Pizza Especial de Camarão">
+                        </figure>
+
+                        <div>
+                            <p><span>Camarão</span> <span>80.00</span></p>
+
+                            <p>Camarão, queijo e espinafre.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option4">
+                        <figure>
+                            <img src="../images/aditional_1.png" alt="Imagem de um Refrigerante Coca-Cola">
+                        </figure>
+
+                        <div>
+                            <p><span>Coca-Cola 2L</span> <span>8.00</span></p>
+
+                            <p>Garrafa pet de um refrigerante Coca-Cola 2L.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="option4">
+                        <figure>
+                            <img src="../images/aditional_2.png" alt="Imagem de um Refrigerante Pepsi">
+                        </figure>
+
+                        <div>
+                            <p><span>Pepsi 2L</span> <span>8.00</span></p>
+
+                            <p>Garrafa pet de um refrigerante Pepsi 2L.</p>
+
+                            <div>
+                                <select name="option_size">
+                                    <option value="big" selected>Grande</option>
+                                    <option value="medium" selected>Média</option>
+                                    <option value="small" selected>Pequena</option>
+                                </select>
+
+                                <input type="number" name="option_number" value="0">
+
+                                <button>Pedir</button>
                             </div>
                         </div>
                     </li>
                 </ul>
-                
-                <hr>
-
-                <div id="lista_cardapio">
-                    <div>
-                        <div>
-                            <figure>
-                                
-                            </figure>
-                            <div>
-                                <h3>Mussarela</h3>
-                                <p>R$90.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo mussarela e orégano</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity">
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Calabresa</h3>
-                                <p>R$95.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo mussarela, calabresa fatiada e cebola</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity">
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Marguerita</h3>
-                                <p>R$100.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo mussarela, manjericão e rodelas de tomate</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity"> 
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <h3>Portuguesa</h3>
-                                <p>R$87.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo, presunto, ovo, cebola, ervilha e azeitona</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity">
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Napolitana</h3>
-                                <p>R$93.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo mussarela, rodelas de tomate, parmesão e orégano</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity">
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Bacon</h3>
-                                <p>R$92.00</p>
-                            </div>
-                            <div>
-                                <span>Molho de Tomate, queijo mussarela e bacon</span>
-                            </div>
-                            <div>
-                                <select name="size" id="select_size">
-                                    <option value="">Pequeno</option>
-                                    <option value="">Médio</option>
-                                    <option value="">Grande</option>
-                                </select>
-                                <div class="quantity">
-                                    <button>-</button> <p>1</p> <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-                </div>
-    
-            </article>
+            </section>
         </main>
 
         <footer>

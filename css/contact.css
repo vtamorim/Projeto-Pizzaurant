@@ -1,0 +1,111 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-inline: calc((100% - 1100px) / 2);
+    margin-block: 4rem;
+}
+
+.contact-forms > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-forms > div + div {
+    margin-top: 2rem;
+}
+
+.contact-forms > div a {
+    color: var(--gray-1);
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5ch;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--yellow-1);
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.contact-forms > div a:hover {
+    background-color: var(--yellow-2);
+}
+
+.contact-forms > div a span {
+    font-size: inherit;
+}
+
+.contact-forms > div > div h3 {
+    color: var(--yellow-1);
+    font-size: 1.5rem;
+}
+
+form {
+    width: 35%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    background-color: var(--gray-1);
+    box-shadow: 0 0 .1rem var(--shadow);
+}
+
+form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+form fieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Precisar MUITO ser melhorado */
+    gap: 1rem;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+form label {
+    position: relative;
+}
+
+form label span {
+    color: var(--gray-4);
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: .2rem;
+    transform: translateY(-50%);
+}
+
+form :where(input, textarea, button) {
+    color: var(--gray-4);
+    font-size: 1.2rem;
+    padding: .5rem;
+    border: 0;
+    outline: 0;
+    border-radius: .2rem;
+    width: 100%;
+    box-shadow: 0 0 .1rem var(--shadow);
+}
+
+form input {
+    padding-left: 2.2rem;
+}
+
+form button {
+    color: var(--gray-1);
+    font-weight: bold;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    background-color: var(--yellow-1);
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--yellow-2);
+}
