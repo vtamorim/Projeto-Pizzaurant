@@ -6,7 +6,7 @@ main section {
     padding-inline: calc((100% - 1100px) / 2);
 }
 
-.itens_cardapio h2 {
+.itens_cardapio h3 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -156,6 +156,7 @@ main section {
 .cardapio_viewer li > div > div > select {
     font-size: 1.1rem;
     border: 0;
+    background-color: transparent;
 }
 
 .cardapio_viewer li > div > div > input[type="number"] {
@@ -164,6 +165,7 @@ main section {
     border: 0;
     border-bottom: .2rem solid var(--gray-3);
     width: 25%;
+    background-color: transparent;
 }
 
 .cardapio_viewer li > div > div > button {
@@ -179,5 +181,114 @@ main section {
 }
 
 .cardapio_viewer li > div > div > button:hover {
+    background-color: var(--yellow-2);
+}
+
+.order_maker h3 {
+    color: var(--gray-4);
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+}
+
+.order_maker > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: start;
+    gap: 1rem;
+}
+
+.order_maker--list ul {
+    list-style-type: none;
+}
+
+.order_maker--list ul li {
+    color: var(--gray-4);
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_maker--list ul li span:last-child {
+    color: var(--purple-light-3);
+    font-weight: bold;
+}
+
+.order_maker--list ul li span:last-child::before {
+    content: "R$";
+}
+
+.order_maker--list ul li + li, 
+.order_maker--list > p {
+    margin-top: .3rem;
+}
+
+.order_maker--list > p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_maker--list > p span:last-child {
+    color: var(--yellow-1);
+}
+
+.order_maker--list > p span:last-child::before {
+    content: "R$";
+}
+
+.order_maker form fieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Precisar MUITO ser melhorado */
+    gap: 1rem;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.order_maker form label {
+    position: relative;
+}
+
+.order_maker form label span {
+    color: var(--gray-4);
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: .2rem;
+    transform: translateY(-50%);
+}
+
+.order_maker form :where(input, button) {
+    color: var(--gray-4);
+    font-size: 1.2rem;
+    padding: .5rem;
+    border: 0;
+    outline: 0;
+    border-radius: .2rem;
+    width: 100%;
+    box-shadow: 0 0 .1rem var(--shadow);
+    transition: background-color .3s ease;
+}
+
+.order_maker form input {
+    padding-left: 2.2rem;
+}
+
+.order_maker form input:focus {
+    background-color: var(--gray-1);
+}
+
+.order_maker form button {
+    color: var(--gray-1);
+    font-weight: bold;
+    border-radius: .5rem;
+    margin-top: .1rem;
+    background-color: var(--yellow-1);
+    cursor: pointer;
+}
+
+.order_maker form button:hover {
     background-color: var(--yellow-2);
 }
